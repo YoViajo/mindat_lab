@@ -1,0 +1,7 @@
+https://medium.com/swlh/text-mining-whatsapp-chat-analysis-6a866f647945
+Text Mining: WhatsApp Chat Analysis
+Analysing the hidden trends and the useful insights behind any group chat in Python
+
+https://raw.githubusercontent.com/talktoaakash/DS_Portfolio/master/WhatsApp_Chat_Analysis-Copy1.ipynb
+
+X no funciona con texto descargado de chat (BI)
