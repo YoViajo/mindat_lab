@@ -1,0 +1,15 @@
+
+
+Generación de nube de palabras con texto del libro "Modelo de desarrollo cruceño"
+
+# Prueba 1
+https://www.wordclouds.com/
+
+> conversión pdf -> txt
+> importado a herramienta en-línea (worldclouds)
+> procesamiento y ajuste de parámetros: eliminación de palabras no relevantes, tema de color 
+
+# Prueba 2
+https://worditout.com/word-cloud/create
+
+
