@@ -8,3 +8,8 @@ Ejercicios varios sobre minería de datos.
 
 [Generación de nube de palabras con texto de un libro](texto/02/)
 
+[Búsqueda de direcciones electrónicas](texto/03/)
+
+[Descarga y guardado de datos de Twitter para análisis](texto/04/)
+
+[Nube de palabras (cód R)](texto/05/)

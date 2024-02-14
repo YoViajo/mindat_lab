@@ -1,0 +1,341 @@
+﻿UNIVERSIDAD CATÓLICA BOLIVIANA “SAN PABLO”
+SANTA CRUZ DE LA SIERRA
+
+
+
+
+
+
+Maestría en Inteligencia de Negocios
+
+
+
+
+
+
+PROTOCOLO DE INVESTIGACIÓN
+
+
+Tema:
+Minería de datos de redes sociales: caso de estudio del sector turismo del departamento de Santa Cruz, Bolivia
+
+
+
+
+
+
+
+	Maestrante: 	Eric Armijo Méndez
+	Docente: Dra. Karem Infantas Soto
+	
+
+
+
+
+
+Santa Cruz, 19 de abril de 2020
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Título en español:	
+Minería de datos de redes sociales: Caso de estudio del sector turismo del departamento de Santa Cruz, Bolivia
+
+
+
+Título en inglés:
+Data mining of social media: Case study for the tourism sector at the Santa Cruz department, Bolivia
+
+Índices
+Contenido
+Índices	3
+1.	Campo general y tema (importancia, interés y experiencia)	6
+2.	Planteamiento del problema	7
+3.	Marco de referencia / fundamentación teórica	10
+4.	Hipótesis y variables	14
+5.	Metodología	15
+6.	Propuesta de implementación	16
+7.	Fuentes de consulta	18
+
+
+Lista de figuras
+Figura 2. Algunos de los servicios más populares de redes sociales en internet.	11
+Figura 3. Pantalla de la red social Instagram que muestra las fotos asociadas al Salar de Uyuni, Bolivia.	11
+Figura 4. Visualización de más 10 años de fotos geoetiquetadas para el norte de la ciudad de San Francisco, EE.UU.	12
+Figura 5. Áreas de puntos de interés turístico detectadas automáticamente para turistas (azul) y residentes locales (naranja) en la ciudad de Amsterdam.	13
+Figura 1. Diagrama de elementos del sector turismo considerados en el estudio.	14
+Figura 1. Diagrama de elementos del sector turismo considerados en el estudio.	16
+
+
+
+
+
+
+RESUMEN
+
+Palabras clave: turismo, Bolivia, redes sociales, minería de datos
+
+
+
+
+
+
+ABSTRACT
+
+Keywords: tourism, Bolivia, social media, data mining
+
+
+    1. Campo general y tema (importancia, interés y experiencia)
+La presente investigación se orienta al estudio del sector turismo en una región de Bolivia mediante el uso de analítica avanzada de contenido generado por usuarios de servicios de redes sociales en internet.
+El turismo es una de las mayores industrias en el mundo y una de las actividades económicas y culturales más importantes con las que puede contar un país (UNWTO, 2016). El año 2016, Bolivia recibió 1,2 millones de visitantes extranjeros (ACTurismo, 2017) y para el 2025 se prevé llegar a 3 millones, según el Ministerio de Culturas y Turismo (Peredo, 2016). La importancia económica del turismo se refleja en los 815 millones de dólares americanos que movió el 2018 (IBCE, 2019), año de la última cifra disponible.
+La actividad turística está caracterizada por un uso intensivo de información, de ahí el impacto que las tecnología de la información y comunicaciones (TIC) han tenido desde la perspectiva del consumo como de la oferta (Baidal et al., 2014). En los últimos años surge el concepto de turismo inteligente (smart tourism, en inglés) que busca aplicar las formas emergentes de TIC para aprovechar cantidades masivas de datos (Lamelas, 2017).
+Han existido algunas intentos de aplicar la inteligencia de negocios en el turismo (Fuchs et al., 2014; Höpken et al., 2015; Yuan & Ho, 2015), aunque se puede asumir que el sector tiene todavía un gran potencial de crecimiento en el uso de sistemas de información de analítica avanzada que apoyen la toma de decisiones.
+Existe abundante literatura que conecta el uso de datos públicos de redes sociales con diferentes aplicaciones relacionadas con el turismo. Los estudios van desde la identificación de los puntos de interés turístico de un área (Chen et al., 2009; Jin & Xu, 2018; Kádár & Gede, 2013; Karayazi & This, 2019; Maeda et al., 2018; Mamei et al., 2010; Peng & Huang, 2017); el seguimiento al movimiento y flujo de los turistas en una región (Chua et al., 2016; De Choudhury et al., 2010; Girardin et al., 2008; Popescu et al., 2009); la comprensión del comportamiento de los turistas, incorporando la consideración espacio-temporal (Da Rugna et al., 2012); la identificación de factores que definen la popularidad de los sitios (Donahue et al., 2018; Hausmann et al., 2018; Maeda et al., 2018; Majid et al., 2013; Sun et al., 2019); la comparación y validación de fuentes estadísticas oficiales sobre turismo (Kádár, 2014); a la base para un sistema que recomienda destinos (Tasse, 2017).
+Una revisión preliminar de literatura no encontró investigación publicada en Bolivia que aplique técnicas de analítica de datos en el contexto del turismo. El presente estudio será un aporte para llenar este vacío.
+    2. Planteamiento del problema
+        2.1. Conceptualización
+La disponibilidad de conocimiento profundo sobre los elementos de la industria del turismo ayuda a la gestión, planificación y la formulación de políticas efectivas del sector. Por ejemplo, un mejor conocimiento de las expectativas (la demanda) de los turistas permite a una agencia pública de promoción del turismo orientar el uso de fondos públicos, tradicionalmente escasos, a sitios turísticos específicos. Este uso de fondos sería recompensando por un retorno en ingresos económicos de los turistas, confirmando la efectividad de las decisiones de manejo de recursos tomadas.
+El desarrollo de conocimiento sobre el sector turismo en los países, incluyendo Bolivia, se apoya en métodos tradicionales de colecta de datos, que incluyen encuestas, entrevistas y grupos focales. Estos métodos adolecen de varias limitaciones: son caros y demandan mucho tiempo (Önder et al., 2016); los datos oficiales derivados son propensos a errores de medición (Henderson et al., 2012) y han sido cuestionados en la literatura por la pobre armonización de los métodos de colecta de datos, su actualidad y los procedimientos de estimación estadística (Lam & McKercher, 2013).
+Desde la llegada de internet, partes importantes de la información de procesamiento y transacciones de turismo son manejadas electrónicamente. Los viajeros dejan huellas electrónicas durante todas las actividades relacionadas con el viaje: la búsqueda y planificación, reserva, consumo de servicio, y la retroalimentación en sitios de comunidades (e.g., plataformas de redes sociales) o a través de encuestas en-línea (Fuchs et al., 2014).
+En un país, los turistas tienden a visitar lugar bien conocidos, debido a la popularidad de esos lugares. Buena parte de esa popularidad viene dada por las publicaciones en las redes sociales, especialmente aquellas que incluyen fotografías. Como resultado de esto, ocurre una distribución no balanceada de visitantes/turistas en un país.
+Es de interés de esta investigación investigar el comportamiento de turistas nacionales y extranjeros para encontrar los lugares más atractivos/populares para ellos usando publicaciones de texto y fotografías geoetiquetadas. Como resultado, las razones subyacentes para la popularidad de estos sitios pueden ser exploradas y pueden ser propuestos sitios similares, pero menos atractivos/populares para distribuir más homogéneamente los visitantes en el país.
+
+        2.2. Preguntas de investigación
+
+            2.2.1. Pregunta Central
+La principal pregunta de investigación es ¿Cómo pueden utilizarse los datos de las redes sociales para entender la preferencia de los turistas por ciertos sitios turísticos en el departamento de Santa Cruz, Bolivia?
+
+            2.2.2. Preguntas Secundarias
+    • ¿Cuáles son los conjuntos de datos disponibles en redes sociales y cómo son usados para estudios sobre turismo?
+    • ¿Cuáles son las áreas más atractivas/populares para el turismo dentro del departamento de Santa Cruz, Bolivia?
+    • ¿Cuáles son las diferencias entre los turistas locales y extranjeros en términos de su distribución espacio-temporal?
+    • ¿Qué características/atributos contribuyen a la atractividad y popularidad de ciertos sitios?
+    • ¿Cómo impactan las comodidades (instalaciones/servicios) y la accesibilidad a la popularidad de los sitios turísticos en el departamento de Santa Cruz, Bolivia?
+        2.3. Objetivos
+            2.3.1. General
+Desarrollar analítica de datos de turistas y destinos turísticos en el departamento de Santa Cruz, Bolivia con fuentes públicas de datos de redes sociales para los pasados 10 años.
+            2.3.2. Particulares
+    • Diseñar y alimentar una base de datos de registros públicos de redes sociales, que sea representativa de la actividad turística de los últimos 10 años en el departamento de Santa Cruz, Bolivia. 
+    • Encontrar los sitios turísticos más populares en el departamento de Santa Cruz, Bolivia para el turismo a partir del análisis geográfico de registros de redes sociales. 
+    • Revelar patrones espacio-temporales de comportamiento de turistas nacionales y extranjeros mediante técnicas de minería de datos.
+    • Identificar las razones subyacentes para la popularidad de los principales sitios turísticos.
+        2.4. Justificación
+La presente investigación busca ejemplificar la aplicación de técnicas modernas de tecnologías de información y comunicaciones en un sector tradicionalmente atendido por técnicas antiguas y limitantes. Mediante técnicas de analítica de datos, se mostrará la pertinencia de incorporar grandes conjuntos de datos de libre acceso para identificar patrones espacio-temporales de los componentes del sistema turístico.
+El conocimiento resultante de la presente investigación aportará información valiosa a la gestión del sector turismo del departamento de Santa Cruz, Bolivia, ayudando a orientar mejor los recursos y acciones hacia los turistas y destinos turísticos. Son potenciales beneficiarios de los resultados los gestores públicos del turismo: a nivel nacional, el Ministerio de Culturas y Turismo; a nivel departamental, la Organización Gestión Destino Turístico Santa Cruz (liderada por el Gobierno Departamental de Santa Cruz); y a nivel municipal, los gobiernos municipales de los principales atractivos turísticos (e.g, Samaipata, Santa Cruz de la Sierra). Adicionalmente, existe una diversidad de actores privados (e.g., hotelería y alojamientos, operadores turísticos, restaurantes) que podrían también beneficiarse.
+Como resultado de una mejor comprensión del turismo en el departamento, por ejemplo, la autoridad de gestión turística del departamento de Santa Cruz podrá definir campañas de promoción turística con un mensaje más efectivo hacia visitantes de diferentes segmentos. Adicionalmente, los tomadores de decisiones podrán fortalecer con inversiones en infraestructura o servicios algún atributo revelado de la preferencia de los visitantes. Las posibilidades son muchas una vez se incrementa la compresión de las relaciones entre los elementos del sector turismo.
+        2.5. Viabilidad
+La viabilidad de la investigación se analizó en sus diferentes aspectos:
+Viabilidad técnica
+La investigación se basará en recursos técnicos accesibles al investigador: herramientas de software principalmente de uso libre, metodologías publicadas abiertamente en revistas académicas y libros, y datos de acceso libre mediante internet.
+Viabilidad económica
+La investigación no requerirá de inversiones significativas, limitándose a la asignación del tiempo del investigador, gastos de desplazamiento para entrevistas y visitas al terreno, y algunos suministros menores de presentación de avances a actores claves. El investigador garantiza el uso de fondos propios y algunos fondos menores de patrocinadores de la investigación para cubrir el costo de la investigación.
+Viabilidad temporal
+La investigación está siendo dimensionada para ajustarse al tiempo recomendado de finalización de la maestría.
+    3. Marco de referencia / fundamentación teórica
+        3.1. Servicios de redes sociales en internet
+En su definición original, proveniente de la sociología, una red social se define como “un conjunto bien delimitado de actores – individuos, grupos, organizaciones, comunidades, sociedades globales, etc. – vinculados unos a otros a través de una relación o un conjunto de relaciones sociales” (Lozares Colina, 1996).
+
+Figura 1. Algunos de los servicios más populares de redes sociales en internet1.
+Los servicios de redes sociales de internet son “aplicaciones web de comunicación y de interacción entre usuarios, donde se forman grupos compuestos por personas más o menos conocidas, en función de intereses, edad o entornos, entre muchas otras variables” (Cruz et al., 2010).
+Flickr, Instagram y Foursquare son algunos de los servicios más populares de redes sociales, que poseen un fuerte enfoque hacia la compartición social de fotografías (Error: no se encontró el origen de la referencia).
+
+Figura 2. Pantalla de la red social Instagram que muestra las fotos asociadas al Salar de Uyuni, Bolivia.
+
+            3.1.1. Datos de las redes sociales
+La popularidad de los servicios de las redes sociales ha lleva a la generación de grandes volúmenes de datos estructurados y no-estructurados. Los principales tipos de datos de contenido generado por los usuarios son datos textuales en-línea (e.g., datos de comentarios, datos de blogs) y datos de imágenes en-línea, que incluyen imágenes estáticas y video (Zhang et al., 2020). La gran cantidad de imágenes y video en los servicios de redes sociales es explicada por la proliferación de cámaras digitales y la creciente práctica de compartir fotos.
+Una fotografía generada por el usuario en redes sociales usualmente contiene dos tipos significativos de información. Una es el contenido visual de la foto misma, y el otro es la información geográfica adjunta a la foto (Zhang et al., 2020). Una fotografía con información de ubicación, la “etiqueta geográfica”, es también conocida como geoetiquetada.
+Las bases de datos de estos servicios son accesibles públicamente mediante un interfaz de programación de la aplicación (más conocido por su sigla en inglés, API – Application Programming Interface). Una API es un conjunto de instrucciones dirigidas a desarrolladores para obtener subconjuntos de la base de datos dados ciertos parámetros (e.g., delimitación geográfica o temporal). En el caso de las redes sociales, una API puede entregar metadatos (descripciones de los datos, como nombre de usuario y coordenadas de ubicación) o incluso el contenido de la publicación en la red (e.g., el texto o la fotografía). 
+        3.2. Analítica de datos: minería de datos
+La técnica elegida para el análisis de datos de redes sociales está fuertemente relacionada con el enfoque y propósito del estudio.
+Si los registros poseen atributo de ubicación (coordenadas), un primer paso acostumbra ser la visualización de los mismos en un mapa (Kádár & Gede, 2013), para una rápida identificación de patrones espaciales.
+
+Figura 3. Visualización de más 10 años de fotos geoetiquetadas para el norte de la ciudad de San Francisco, EE.UU.
+En la Figura 3, extraída de (Lynch, 2015), la visualización de fotos geoetiquetadas revela la configuración de calles, puentes y rutas de barcos de una ciudad con gran número de publicaciones en la red social Flickr. La mayor densidad elementos visualizados de algunas áreas sugiere una mayor actividad (económica o cultural) en ese lugar.
+La minería de datos (data mining, en inglés) es el análisis de (a menudo gran cantidad) datos observados para encontrar relaciones no sospechadas y resumir los datos en maneras nuevas que sean tanto entendibles y útiles para el usuario de los datos (Hand, 2007). Las relaciones y resúmenes derivados a través del ejercicio de minería de datos a menudo se refieren como modelos o patrones. Como ejemplos se incluyen ecuaciones lineales, reglas, agrupamientos, grafos, estructuras de árbol, y patrones recurrentes en series de tiempo.
+Para estudios de identificación de puntos de interés turístico a partir de la concentración de los registros de presencia de turistas, es común aplicar el método de agrupamiento (clustering) DBSCAN2 (Karayazi & This, 2019; Peng & Huang, 2017). La Figura 4, tomada de (Karayazi & This, 2019), ejemplifica el resultado que puede obtenerse de la identificación de agrupamiento de registros (fotos geoetiquetadas).
+
+Figura 4. Áreas de puntos de interés turístico detectadas automáticamente para turistas (azul) y residentes locales (naranja) en la ciudad de Amsterdam.
+    4. Hipótesis y variables
+        4.1. Hipótesis
+Un modelo de minería de datos basado en datos públicos de redes sociales ofrece una comprensión de los factores de preferencia de sitios turísticos en el departamento de Santa Cruz, Bolivia.
+        4.2. Variables
+            4.2.1. Variables independientes
+Se identificó como variable independiente el modelo de minería de datos a utilizarse. Esta variable se puede definir como la representación del sector turismo regional construida con contenido generado por los usuarios de servicios de redes sociales. El modelo está estructurado en las dimensiones (con indicadores): publicación (temporalidad, contenido texto, contenido imagen), destino turístico (características, servicios, geolocalización), turista (origen) y visitas (temporalidad, opinión). 
+
+Figura 5. Diagrama de elementos del sector turismo considerados en el estudio.
+La figura 1 da una aproximación visual a los componentes considerados en el modelo (como burbujas), y las relaciones principales entre los mismos (conectores/flechas).
+            4.2.2. Variable dependiente
+Se define como variable dependiente “la comprensión de los factores de preferencia de sitios turísticos en el departamento de Santa Cruz, Bolivia”. Esta variable tiene como dimensiones constituyentes los diferentes factores de estudio del sitio turístico (con indicadores): servicios (oferta de actividades), infraestructura (calidad de alojamiento), accesibilidad (grado de accesibilidad, expresado en medios de transporte y calidad de la vía), estrato económico meta (categoría de visitante meta).
+    5. Metodología
+La investigación se apoyará principalmente en datos obtenidos libremente de los accesos públicos (i.e., acceso API internet) de los servicios de redes sociales. Se propone el uso de las publicaciones abiertas de los servicios Twitter3, Flickr4, Instagram5 y Foursquare6, conocidos como sitios populares para la publicación de información turística y por proveer acceso más flexible a sus datos. Otros servicios de redes sociales como Facebook no serán considerados por su política altamente restrictiva de acceso a sus datos.
+Los datos recogidos se orientarán a publicaciones sobre sitios turísticos del departamento de Santa Cruz, Bolivia, con una temporalidad de los últimos diez años (desde enero 2010 hasta el presente 2020).
+Como datos secundarios, principalmente de interpretación y validación de los resultados de los modelos, se propone la consulta de estadísticas oficiales de turismo regional (i.e., Organización Gestión Destino Turístico Santa Cruz) y municipal (oficinas municipales de turismo). El acceso a este tipo de datos requerirá la visita a bibliotecas y entrevistas a especialistas de turismo de las organizaciones oficiales.
+El trabajo se realizará de preferencia con herramientas libres/gratuitas que proveen entornos de preparación y visualización de datos, e implementaciones de los algoritmos más populares de minería de datos: lenguaje R con el entorno R-Studio7; lenguaje Python con el entorno Wing8; Weka9, un software de aprendizaje automático (machine learning); y KNIME10, una plataforma de minería de datos.
+La 
+
+Figura 6. Diagrama de elementos del sector turismo considerados en el estudio.
+
+    6. Propuesta de implementación
+        6.1. Pasos metodológicos
+La investigación seguirá los fases estándares definidas en la metodología CRISP-DM (Wirth & Hipp, 2000) para el desarrollo de un proyecto de minería de datos.
+Fases:
+
+    I.  Investigación
+    A. Redefinición del Planteamiento del Protocolo
+    B. Planificación de la investigación y métodos específicos, metodologías, selección y justificar
+    II.  Planificación
+    A. Definición de la Estrategia metodológica
+    • Investigación aplicada de corte transversal.
+    • Alcance cuantitativo descriptivo.
+    • Técnicas potenciales: análisis de sentimiento; análisis de agrupamiento (clustering); segmentación.
+    B. Planificar los métodos y técnicas que se va a utilizar
+    • Prueba piloto.
+    C. Cronograma
+    III. Definir las Definir las necesidades o comprensión del negocio
+    • Comprensión del rubro
+    • Valoración de la situación
+    • Determinación de los objetivos de minería de datos
+    IV. Comprensión de los datos
+    • Identificación del público meta
+    • Recopilación de datos: identificación de accesos API
+    • Descripción de datos
+    • Exploración de datos
+    V. Preparación de los datos
+    • Limpieza de datos
+    • Integración de datos
+    • Formato de datos
+    VI. Modelado
+    • Selección de la técnica de modelado
+    • Generación de un modelo de comprobación
+    • Generación de modelos
+VI. Evaluación de resultados
+    • Evaluación de resultados de todos los modelos generados
+    VII. Cierre
+            1. Ejecución del método Delphi (especialistas en turismo)
+                1. Selección de expertos
+                2. Envío de cuestionario de constatación
+                3. Revisión de los resultados
+                4. Iteración de la revisión
+            2. Revisión del documento
+
+        6.2. Cronograma
+Se estima la ejecución de la investigación en seis meses.
+Fase
+Mes 1
+Mes 2
+Mes 3
+Mes 4
+Mes 5
+Mes 6
+Investigación
+X
+
+
+
+
+
+Planificación
+X
+
+
+
+
+
+Definición de necesidades
+X
+
+
+
+
+
+Comprensión de los datos
+
+X
+
+
+
+
+Preparación de los datos
+
+X
+
+
+
+
+Modelado
+
+
+X
+X
+X
+
+Evaluación de resultados
+
+
+
+
+X
+
+Cierre
+
+
+
+
+
+X
+ 
+
+
+    7. Fuentes de consulta
+        7.1. Bibliografía
+ACTurismo. (2017). Cuantos turistas llegaron a Bolivia el 2016? http://acturism.blogspot.com/2017/02/cuantos-turistas-llegaron-bolivia-el.html
+Baidal, J., Costa, C., Panyik, E., Buhalis, & D. (2014). Spain: from the mass model to a new tourism economy. European Tourism Planning and Organisation Systems: The EU Member States, 61, 384.
+Chen, W.-C., Battestini, A., Gelfand, N., & Setlur, V. (2009). Visual summaries of popular landmarks from community photo collections. 2009 Conference Record of the Forty-Third Asilomar Conference on Signals, Systems and Computers, 1248–1255.
+Chua, A., Servillo, L., Marcheggiani, E., & Moere, A. Vande. (2016). Mapping Cilento: Using geotagged social media data to characterize tourist flows in southern Italy. Tourism Management, 57, 295–310.
+Cruz, R. E., Lara, S., & Naval, C. (2010). Conceptos y aplicaciones de la Web 2.0. En C. Naval, S. Lara, C. Ugarte, & C. Sádaba (Eds.), Educar por la comunicación y la cooperación social (pp. 151–169).
+Da Rugna, J. J., Chareyron, G. G., & Branchet, B. B. (2012). Tourist behavior analysis through geotagged photographies: A method to identify the country of origin. CINTI 2012 - 13th IEEE International Symposium on Computational Intelligence and Informatics, Proceedings, November, 347–351. https://doi.org/10.1109/CINTI.2012.6496788
+De Choudhury, M., Feldman, M., Amer-Yahia, S., Golbandi, N., Lempel, R., & Yu, C. (2010). Automatic construction of travel itineraries using social breadcrumbs. Proceedings of the 21st ACM conference on Hypertext and hypermedia, 35–44.
+Donahue, M. L., Keeler, B. L., Wood, S. A., Fisher, D. M., Hamstead, Z. A., & McPhearson, T. (2018). Using social media to understand drivers of urban park visitation in the Twin Cities, MN. Landscape and Urban Planning, 175, 1–10.
+Fuchs, M., Höpken, W., & Lexhagen, M. (2014). Big data analytics for knowledge generation in tourism destinations--A case from Sweden. Journal of Destination Marketing & Management, 3(4), 198–209. https://doi.org/10.1016/j.jdmm.2014.08.002
+Girardin, F., Calabrese, F., Dal Fiorre, F., Biderman, A., Ratti, C., & Blat, J. (2008). Uncovering the presence and movements of tourists from user-generated content. Intn’l Forum on Tourism Statistics.
+Hand, D. J. (2007). Principles of data mining. Drug safety, 30(7), 621–622.
+Hausmann, A., Toivonen, T., Slotow, R., Tenkanen, H., Moilanen, A., Heikinheimo, V., & Di Minin, E. (2018). Social media data can be used to understand tourists’ preferences for nature-based experiences in protected areas. Conservation Letters, 11(1), e12343.
+Henderson, J. V., Storeygard, A., & Weil, D. N. (2012). Measuring economic growth from outer space. American economic review, 102(2), 994–1028.
+Höpken, W., Fuchs, M., Keil, D., & Lexhagen, M. (2015). Business intelligence for cross-process knowledge extraction at tourism destinations. Information Technology & Tourism, 15(2), 101–130.
+IBCE. (2019). Boletín electrónico bisemanal No. 826, 4 oct 2019.
+Jin, C., & Xu, J. (2018). Using user-generated content data to analyze tourist mobility between hotels and attractions in cities. Environment and Planning B: Urban Analytics and City Science, November, 2399808318811666. https://doi.org/10.1177/2399808318811666
+Kádár, B. (2014). Measuring tourist activities in cities using geotagged photography. Tourism Geographies, 16(1), 88–104. https://doi.org/10.1080/14616688.2013.868029
+Kádár, B., & Gede, M. (2013). Where do tourists go? Visualizing and analysing the spatial distribution of geotagged photography. Cartographica, 48(2), 78–88. https://doi.org/10.3138/carto.48.2.1839
+Karayazi, S. S., & This, D. (2019). The relevance of newly available big data and urban heritage tourism. Investigating the popularity of urban heritage areas in Amsterdam using Flickr data (Número December). Eindhoven University of Technology (TU/e).
+Lam, C., & McKercher, B. (2013). The tourism data gap: The utility of official tourism information for the hospitality and tourism industry. Tourism Management Perspectives, 6, 82–94.
+Lamelas, J. V. C. (2017). Revolución Big Data en el turismo: Análisis de las nuevas fuentes de datos para la creación de conocimiento en los Destinos Patrimonio de la Humanidad de España. International Journal of Information Systems and Tourism (IJIST), 2(2), 23–39. http://www.uajournals.com/ojs/index.php/ijist/article/view/248/208
+Lozares Colina, C. (1996). La teor{\’\i}a de redes sociales. Papers: revista de sociolog{\’\i}a, 48, 103–126.
+Lynch, E. D. W. (2015). The Geotagger’s World Atlas, An Interactive Map That Visualizes Geotagged Flickr Photos. Laughing Squid. https://laughingsquid.com/the-geotaggers-world-atlas-an-interactive-map-that-visualizes-geotagged-flickr-photos/
+Maeda, T. N., Yoshida, M., Toriumi, F., & Ohashi, H. (2018). Extraction of tourist destinations and comparative analysis of preferences between foreign tourists and domestic tourists on the basis of geotagged social media data. ISPRS International Journal of Geo-Information, 7(3), 99.
+Majid, A., Chen, L., Chen, G., Mirza, H. T., Hussain, I., & Woodward, J. (2013). A context-aware personalized travel recommendation system based on geotagged social media data mining. International Journal of Geographical Information Science, 27(4), 662–684.
+Mamei, M., Rosi, A., & Zambonelli, F. (2010). Automatic analysis of geotagged photos for intelligent tourist services. 2010 Sixth International Conference on Intelligent Environments, 146–151.
+Önder, I., Koerbitz, W., & Hubmann-Haidvogel, A. (2016). Tracing tourists by their digital footprints: The case of Austria. Journal of Travel Research, 55(5), 566–573.
+Peng, X., & Huang, Z. (2017). A novel popular tourist attraction discovering approach based on geo-tagged social media big data. ISPRS International Journal of Geo-Information, 6(7), 216.
+Peredo, N. (2016). La creciente y prometedora industria turística de Bolivia. Los Tiempos, edición digital. https://lostiemposdigital.atavist.com/bolivia-busca-triplicar-llegada-de-turistas
+Popescu, A., Grefenstette, G., & Moëllic, P.-A. (2009). Mining tourist information from user-supplied collections. Proceedings of the 18th ACM conference on Information and knowledge management, 1713–1716.
+Sun, X., Huang, Z., Peng, X., Chen, Y., & Liu, Y. (2019). Building a model-based personalised recommendation approach for tourist attractions from geotagged social media data. International Journal of Digital Earth, 12(6), 661–678.
+Tasse, D. (2017). How Geotagged Social Media Can Inform Modern Travelers. Carnegie Mellon University.
+United Nations. (2016). Sustainable tourism. https://sustainabledevelopment.un.org/topics/sustainabletourism
+UNWTO. (2016). Panorama OMT del turismo internacional, edición 2016.
+Wirth, R., & Hipp, J. (2000). CRISP-DM: Towards a standard process model for data mining. Proceedings of the 4th international conference on the practical applications of knowledge discovery and data mining, 29–39.
+Yuan, Y.-L., & Ho, C.-I. (2015). Rethinking the destination marketing organization management in the big data era. En Proceedings of the ASE BigData & SocialInformatics 2015 (pp. 1–5).
+Zhang, K., Chen, D., & Li, C. (2020). How are Tourists Different? - Reading Geo-tagged Photos through a Deep Learning Model. Journal of Quality Assurance in Hospitality and Tourism, 21(2), 234–243. https://doi.org/10.1080/1528008X.2019.1653243
+
+
+

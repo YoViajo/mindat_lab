@@ -1,0 +1,10 @@
+P: How to search for e-mail addresses in text files using CLI commands?
+
+R: To search for email addresses in text files using CLI commands, you can use the grep command along with a regular expression. Here's an example:
+
+grep -E "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b" *.txt
+
+
+// Buscar recursivamente en todos los archivos .txt, posibles direcciones electrónicas (expresión regular generada por ChatGPT) 
+
+grep -r --include "*.txt" -E "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b" .
